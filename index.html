@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Introduction to GIT - BOLTON U.K.</title>
+
+        <meta name="description" content="Introduction to GIT">
+        <meta name="author" content="Ghislain GAUCHER">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+        <link rel="stylesheet" href="css/perso.css">
+        <link rel="icon" type="image/png" href="images/git.png" />
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h2>Introduction to version controle systeme  </h2>
+                    <h4>Git It Together: Solving Your Coding Chaos!</h4>
+                    <h4></h4>
+                    <h5>A guide to version control and why it’s your new best friend.</h5>
+                     <img src="images/gitLogo.png" title="GIT" alt="GIT's Logo" style="width:20%;"/>
+                    <p>
+                        
+                        
+                    </p>
+                    
+                </section>
+                <section>
+                    <section>
+                    <h5>Have you ever been through any of this scenario?</h5>
+                    <ul type="disq">
+                        <li>Accidentally losing code.</li>
+                        <li>Confusion over group project edits.</li>
+                        <li>Struggling to track who made changes.</li>
+                        <li>You worked on one computer and need the files on another.</li>
+                        <li>You want to experiment, but you're scared of ruining the main codebase.</li>
+                    </ul></section>
+                    <section>
+                        <h2>VCS is your solution</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                    <img src="images/whatisvcs.jpg" alt="what is VCS ?"/>
+                    </section>
+                    <section>
+                        <h3><b>VCS (Version Control System )</b> is a software that helps software developers to work together and maintain a complete history of their work.</h3>
+                        <h3>Git is the most popular Distributed Version Control System due to its speed, flexibility, and collaboration features.</h3>
+                    </section>
+                </section>
+                <section>
+                    <section><img src="images/whatIsGit.jpg" alt="What is Git ?" /></section>
+                    <section>
+                        <img src="images/git.png" alt="git logo" style="width: 9%;" >
+                        <h4> <u><b>Git</b></u> is a distributed version control system that tracks versions of files. It is often used to control source code by programmers who are developing software collaboratively.  It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then.
+                        </h4>
+                        <dl>
+                            <dt>It is used for:</dt>
+                            <dd>Tracking code changes</dd>
+                            <dd>Tracking who made changes</dd>
+                            <dd>Coding collaboration</dd>
+                        </dl>
+                    </section>    
+                    <section>    
+                        <p>Git is commonly paired with platforms like <u>GitHub</u>, GitLab, and Bitbucket, which provide cloud-based repositories for enhanced collaboration.</p>
+                        <img src="images/GitHublogo.png" alt="GitHublogo" style="border:0; box-shadow:none; width:20%; float:left;">
+                        <img src="images/gitlablogo.jpeg" alt="GitLablogo" style="border:0; box-shadow:none; width:20%; float:center;">
+                        <img src="images/bitbucketlogo.jpeg" alt="bitbucketlogo" style="border:0; box-shadow:none; width:20%; float:right;">
+                        <br>
+                        <p>The most popular platform for hosting Git repositories is GitHub.</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                       <h1>what is github</h1>
+                    </section>
+                    <section>
+                        <p><b>GitHub </b>is a proprietary developer platform that allows developers to create, store, manage, and share their code. It uses Git to provide distributed version control and GitHub itself provides access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.</p>
+                    </section>
+                    <section>
+                        <h3>Key Features of GitHub:</h3>
+                        <ol type="1">
+                            <li>Git Repository Hosting</li>
+                            <li>Collaboration Tools</li>
+                            <li>Issue Tracking</li>
+                            <li>GitHub Actions</li>
+                            <li>Version Control</li>
+                            <li>Community and Open Source</li>
+                        </ol>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                     <H1>how to use git</H1>
+                    </section>
+                    <section>
+                      <p>Using Git involves several steps, from setting it up to managing your code repositories. Here's a simple guide to get started with Git:</p>
+                      <ol type="1">
+                        <li>install git on linux</li>
+                        <ul type="disq">
+                            <li><dl><dt>Dedian/Ubuntu :</dt>
+                            <dd>
+                                <pre><code>$sudo apt update 
+$sudo apt install git </code></pre>
+                            </dd>
+                        </dl>
+                        </li>
+                            <li>
+                                <dl>
+                                    <dt>fedora :</dt>
+                                    <dd><pre><code>$sudo dnf install git </code></pre>
+                                </dd>
+
+                            </dl>
+                        </li>
+                    </ul>
+                        <p>check if git is properly installed </p>
+                        <pre><code>$git --version</code></pre>
+                        
+                        
+                      </ol>
+                    </section>
+                    <section>
+                        
+                            <h2>2.configure Git</h2>
+                        
+                        <p>set up your Git username and eamil:</p>
+                        <pre><code>$git config --global user.name "your name"
+$git config --global user.email "your email" </code></pre>
+                        <p>view your configuration:</p>
+                        <pre><code>$git config --list</code></pre>
+                        
+                    </section>
+                    <section>
+                        <h2>3.create a new Repository</h2>
+                        <h4>1.open a terminal and navigate to your project directory:</h4>
+                        <pre><code>$cd /path/to/your/project</code></pre>
+                        <h4>2.initialize Git in the directory</h4>
+                        <pre><code>$git init</code></pre>
+                        <h4>or copy(clone)an existing remote repository to your local system: </h4>
+                        <pre><code>$git clone https://github.com/username/repository.git</code></pre>
+                    </section>
+                    <section>
+                        <h2>4.add files to staging</h2>
+                        <h4>1.check the current status :</h4>
+                        <pre><code>$git status</code></pre>
+                        <h4>2.add files to the staging area :</h4>
+                        <pre><code>$git add filename</code></pre>
+                        <h4>add all files:</h4>
+                        <pre><code>$git add .</code></pre>
+                    </section>
+                    <section>
+                        <h2>5.commit changes</h2>
+                        <p>save your changes with a descriptive message:</p>
+                        <pre><code>$git commit -m "intial commit"</code></pre>
+                        <h2>6.create and switch branches</h2>
+                        <h4>1. create a new branch:</h4>
+                        <pre><code>$git branch feature_branch</code></pre>
+                        <h4>2.switch to the branch:</h4>
+                        <pre><code>$git checkout feature_branch</code></pre>
+                    </section>
+                    <section>
+                        <h2>7.connect to a remote repository</h2>
+                        <h4>1.add a remote repository(github):</h4>
+                        <pre><code>$git remote add origin https://github.com/username/repository.git</code></pre>
+                        <h4>2.push changes to the remote :</h4>
+                        <pre><code>$git push -u origin main</code></pre>
+                    </section>
+                    <section>
+                        <h2>8.pull changes from the remote repository</h2>
+                        <h4>fetch and integrate changes:</h4>
+                        <pre><code>$git pull origin main</code></pre>
+                        <h2>9.view commit history</h2>
+                        <pre><code>$git log</code></pre>
+                    </section>
+                   
+                </section>
+                
+                
+                <section>
+                    <img src="images/gitgraph.png" alt="gitgraph">
+                </section>
+                
+                
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+    </body>
+</html>

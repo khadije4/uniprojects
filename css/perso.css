@@ -1,0 +1,8 @@
+.reveal section img {
+    border:0; 
+    box-shadow:none; 
+}
+
+.reveal section p.compagnys img {
+    width: 32%;
+}

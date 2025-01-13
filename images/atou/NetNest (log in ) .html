@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	 <meta charset="UTF-8">
+ 	<title> NetNest </title>
+ 	<style>
+
+
+
+
+		input:invalid + .error-message {
+			visibility: visible; /* S'affiche si le champ est invalide */
+		}
+		
+		
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			/* background-color: #f9f9f9; */
+			background-color: white;
+		}
+		
+		table {
+			margin: 50px auto;
+			border-spacing: 20px;
+			width: 80%;
+		}
+		
+		.td {
+			text-align: center;
+			background-color: #ffffff;
+			/* border-radius: 10px; */
+			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+			padding: 20px;
+			position: relative;
+			top: -50px;
+		}
+		
+		img {
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+		
+		h3 {
+			margin-top: 10px;
+			color: #333333;
+		}
+		
+		p {
+			font-size: 16px;
+			color: #555555;
+		}
+		
+		form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		.mini-box {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		
+		label {
+			font-weight: bold;
+			color: #333333;
+			margin-bottom: 5px;
+			text-align: left;
+		
+		}
+		
+		input {
+			width: calc(100% - 20px);
+			padding: 10px;
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			font-size: 14px;
+			/* background-color: #f7f7f7; */
+			background-color: #e7f7f2;
+		
+		}
+		
+		input:focus {
+			border-color: #40826D;
+			outline: none;
+			background-color: #ffffff;
+		}
+		
+		
+		
+		.or {
+			display: flex;
+			align-self: flex-end;
+			align-items: center;
+			margin-top: 20px;
+			text-align: right;
+			
+		}
+		
+		/* a {
+			text-decoration: none;
+			font-size: 15px;
+			color: #40826D; */
+		/* } */
+		
+		a:hover {
+			text-decoration: underline;
+		}
+		
+		button {
+			margin-top: 10px;
+			padding: 10px 20px;
+			font-size: 14px;
+			color: white;
+			background-color: #40826D;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		button a {
+			color: white;
+			text-decoration: none;
+		}
+		
+		button:hover {
+			background-color: #336E5C;
+		}
+		</style>
+
+
+</head>
+
+
+<body>
+	
+	<table>
+	<tr>
+		<td class="td"> 
+			<img src="NetNest.jpeg" width="280"  >
+			<h3><b>Log in </b></h3>
+			<p> Create account in <font color="#40826D" >NetNest </font></p>
+		</td>
+		<td>
+			<br>
+			<form> 
+
+				<div class="mini-box">
+					<label for="name">Nom :</label>
+					<input type="text" id="name" placeholder="Entrez votre nom">
+					<small  id="nameError"></small>
+
+				</div>
+
+				<div class="mini-box">
+					<label for="name">Prénom :</label>
+					<input type="text" id="prénom" placeholder="Entrez votre prénom">
+					<small id="prenameError"></small>
+				</div>
+	
+				<div class="mini-box">
+					<label for="email">Email :</label>
+					<input type="text" id="email" placeholder="exemple@domaine.com">
+					<smill id="emailError"></smill>
+
+				</div>
+	
+				<div class="mini-box">
+					<label for="password">Mot de passe :</label>
+					<input type="password" id="password" placeholder="Entrez un mot de passe">
+					<smill class="error-message" id="passwordError"></smill>
+				</div>
+
+				<div class="mini-box">
+					<label for="confirmPassword">Confirmez le mot de passe :</label>
+					<input type="password" id="confirmPassword" placeholder="Confirmez votre mot de passe">
+					<smill class="error-message" id="confirmPasswordError"></smill>
+				</div>
+	
+				<div class="mini-box">
+					<label for="phone">Numéro de téléphone :</label>
+					<input type="text" id='phone' placeholder="Entrez votre numéro">
+					<smill  id="phoneError" ></smill>
+				</div>
+
+				
+
+				
+			</form>
+		</td>
+	</tr>
+
+	</table>
+	<ul type="disc">
+		<li>llllll</li>
+	</ul>
+
+	<script >const name = document.getElementById("name");
+		const nameError = document.getElementById("nameError");
+		name.addEventListener('input', (e) => {
+			e.preventDefault();
+			const oneOrTwoWordsPattern = /^[A-Za-z]+( [A-Za-z]+)?$/;
+			if (!name.value.trim()) {
+				nameError.textContent = 'Le nom est obligatoire.';
+				nameError.style.color = 'red';
+				nameError.style.display = 'block';
+			} 
+			else if (!oneOrTwoWordsPattern.test(name.value.trim())) {
+				nameError.textContent = 'Le nom ne doit contenir qu’un ou deux mots.';
+				nameError.style.color ="orange";
+				nameError.style.display = 'block';
+			} 
+		   else{
+				nameError.textContent = '';
+				nameError.style.display = 'none';
+			}
+		});
+		const prename = document.getElementById("prénom");
+		const prenameError = document.getElementById("prenameError");
+		prename.addEventListener('input', (e) => {
+			e.preventDefault();
+			const oneOrTwoWordsPattern = /^[A-Za-z]+( [A-Za-z]+)?$/;
+			if (!prename.value.trim()) {
+				prenameError.textContent = 'prenom est obligatoire.';
+				prenameError.style.color = 'red';
+				prenameError.style.display = 'block';
+			} 
+			else if (!oneOrTwoWordsPattern.test(prename.value.trim())) {
+				prenameError.textContent = 'prenom ne doit contenir qu’un ou deux mots.';
+				prenameError.style.color ="orange";
+				prenameError.style.display = 'block';
+			} 
+		   else{
+				prenameError.textContent = '';
+				prenameError.style.display = 'none';
+			}
+		});
+		
+		const emailregex = /^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,}$/;
+		const email = document.querySelector("#email");
+		const emailError = document.getElementById("emailError");
+		email.addEventListener('input', (e) => {
+			e.preventDefault();
+			if (!email.value.trim()) {
+				emailError.textContent = 'email est obligatoire.';
+				emailError.style.color = 'red';
+				emailError.style.display = 'block';
+			} 
+			else if (!emailregex.test(email.value.trim())) {
+				emailError.textContent = 'e-mail doit contenir @ et .';
+				emailError.style.color ="orange";
+				emailError.style.display = 'block';
+			} 
+		   else{
+				emailError.textContent = '';
+				emailError.style.display = 'none';
+			}
+		});
+		const password = document.getElementById('password');
+		const confirmPassword = document.getElementById('confirmPassword');
+		const passwordError = document.getElementById('passwordError');
+		const confirmPasswordError = document.getElementById('confirmPasswordError');
+		confirmPassword.addEventListener('input', (e) =>
+		{
+			e.preventDefault(); 
+			if(password.value !== confirmPassword.value){
+				confirmPasswordError.textContent ="les mots de passe ne correspond pas";
+				confirmPasswordError.style.color = "red";
+				confirmPasswordError.style.display = "block";
+			}
+			else{
+				confirmPasswordError.textContent ="";
+				confirmPasswordError.style.display ="none";
+			}
+		}
+		);
+		const passwordPattern = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[A-Z]).+$/;
+		
+		password.addEventListener("input", (e)=>
+		{
+			e.preventDefault();
+			if(password.value.length <10 ){
+				passwordError.textContent =" mot de passe doit comporter au moins 10 caractères.";
+				passwordError.style.color = "red";
+				passwordError.style.display ="block";
+			}else if(!passwordPattern.test(password.value)){
+				passwordError.textContent ="Le mot de passe doit contenir au moins une lettre majuscule, \n un chiffre et un caractère spécial.";
+				passwordError.style.display = "block";
+			}else{
+				passwordError.textContent ="";
+				passwordError.style.display ="none";
+			}
+		});
+		const phone = document.getElementById('phone');
+		const phoneError = document.getElementById('phoneError');
+		const phoneRegex = /^\+222[2-4][0-9]{7}+$/;
+		phone.addEventListener('input', (e)=>{
+			e.preventDefault();
+		  if (!phoneRegex.test(phone.value)) {
+			phoneError.textContent = 'Le numéro de téléphone doit commencer par +222 et \n nous ne prenons en charge que le numéro mauritania';
+			phoneError.style.display = 'block';
+		 }else if( phone.value.length !==12) {
+			phoneError.textContent = 'Le numéro de téléphone doit comporter 8 chiffres apres +222.';
+		 }
+		  else {
+			phoneError.textContent = '';
+			phoneError.style.display = 'none';
+		}
+		});
+		
+		</script>
+
+</body>
+
+
+
+
+</html> 
+
+
+
+
+
+
+
+
