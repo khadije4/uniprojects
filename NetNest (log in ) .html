@@ -167,26 +167,26 @@
 				<div class="mini-box">
 					<label for="email">Email :</label>
 					<input type="text" id="email" placeholder="exemple@domaine.com">
-					<smill id="emailError"></smill>
+					<small id="emailError"></small>
 
 				</div>
 	
 				<div class="mini-box">
 					<label for="password">Mot de passe :</label>
 					<input type="password" id="password" placeholder="Entrez un mot de passe">
-					<smill class="error-message" id="passwordError"></smill>
+					<small class="error-message" id="passwordError"></small>
 				</div>
 
 				<div class="mini-box">
 					<label for="confirmPassword">Confirmez le mot de passe :</label>
 					<input type="password" id="confirmPassword" placeholder="Confirmez votre mot de passe">
-					<smill class="error-message" id="confirmPasswordError"></smill>
+					<small class="error-message" id="confirmPasswordError"></small>
 				</div>
 	
 				<div class="mini-box">
 					<label for="phone">Numéro de téléphone :</label>
 					<input type="text" id='phone' placeholder="Entrez votre numéro">
-					<smill  id="phoneError" ></smill>
+					<small  id="phoneError" ></small>
 				</div>
 
 				
@@ -197,9 +197,7 @@
 	</tr>
 
 	</table>
-	<ul type="disc">
-		<li>llllll</li>
-	</ul>
+
 
 	<script >const name = document.getElementById("name");
 		const nameError = document.getElementById("nameError");
@@ -299,7 +297,7 @@
 		});
 		const phone = document.getElementById('phone');
 		const phoneError = document.getElementById('phoneError');
-		const phoneRegex = /^\+222[2-4][0-9]{7}+$/;
+		const phoneRegex = /^\+222[2-4][0-9]{7}$/;
 		phone.addEventListener('input', (e)=>{
 			e.preventDefault();
 		  if (!phoneRegex.test(phone.value)) {
